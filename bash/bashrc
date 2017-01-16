@@ -93,8 +93,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # git aliases
-alias gi='git init'
-alias gs='git status'
+alias g-i='git init'
+alias g-s='git status'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
