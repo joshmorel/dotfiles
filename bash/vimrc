@@ -1,0 +1,41 @@
+call pathogen#infect('bundle/{}')
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set laststatus=2
+set nocompatible "for vimwiki
+
+
+:filetype on
+:filetype plugin on "for vimwiki
+:syntax on "for vimwiki
+
+""""""""""""""
+" COLOR
+""""""""""""""
+
+:set t_Co=256
+:set background=dark
+colorscheme github
+
+""""""""""""""
+" KEY MAP 
+""""""""""""""
+
+"toggle between insert and normal mode with c-space
+nnoremap <NUL> i
+imap <NUL> <Esc>
+
+"toggle between insert mode and visual block mode
+
+imap <c-x> <Esc> <c-v> 
+vmap <c-x> I
+
+imap <c-e> <Esc> :wq 
+
+if "%ft" == "py"
+    imap <c-f> <Esc> :w
+endif
