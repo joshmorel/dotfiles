@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# default vimwiki home - if no env var specified
+DEFAULT_VIMWIKI_PATH="$HOME/vimwiki"
+# for path find either use environment variable if set, otherwise default above
+vimwiki_path=${VIMWIKI_HOME-$DEFAULT_VIMWIKI_PATH}
+index_path="$vimwiki_path/index.wiki"
+
+# first need to check if vimwiki path is valid - exists & has index.wiki
+if [ ! -f "$index_path" ]; then
+    echo ERROR: "$vimwiki_path does not exist or does not contain index.wiki, create or set VIMWIKI_HOME properly"
+    exit 1
+fi
+
+# if no arguments go to index.wiki
+if [ $# -eq 0 ]; then
+    vim $index_path
+else
+    # find the first occurrence of the pattern, following symbolic links
+    result=$(find -L "${vimwiki_path}" -type f -iname $1 -print -quit)
+    # if no result then just open index.wiki
+    vim ${result:-$index_path}
+fi
+
