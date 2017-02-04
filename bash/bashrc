@@ -124,9 +124,10 @@ export NVM_DIR="/home/morel/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Virtualenvwrapper setup
-# do we want this to run during every non-login?
-export WORKON_HOME=$HOME/envs
-export PROJECT_HOME=$HOME/dev
-source /usr/local/bin/virtualenvwrapper.sh
 
+if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+	export WORKON_HOME=$HOME/envs
+	export PROJECT_HOME=$HOME/dev
+	source /usr/local/bin/virtualenvwrapper.sh
+fi
 
