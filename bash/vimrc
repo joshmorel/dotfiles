@@ -17,9 +17,14 @@ set nocompatible "for vimwiki
 " COLOR
 """"""""""""""
 
-:set t_Co=256
-:set background=dark
-colorscheme github
+let COLORHOME = $HOME . "/.vim/colors/github.vim"
+
+" only want to use custom color in xterm, otherwise default
+if $TERM == "xterm" && filereadable(COLORHOME)
+    :set t_Co=256
+    :set background=dark
+    colorscheme github
+endif
 
 """"""""""""""
 " KEY MAP 
