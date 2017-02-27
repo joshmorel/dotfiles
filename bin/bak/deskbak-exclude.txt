@@ -2,8 +2,9 @@
 /proc/*
 /sys/*
 /tmp/*
-$HOME/tmp/*
+*/tmp/*
 /run/*
 /mnt/*
 /media/*
 /lost+found
+*/VirtualBox\ VMs/
