@@ -146,3 +146,11 @@ if [ -f '/home/morel/google-cloud-sdk/path.bash.inc' ]; then source '/home/morel
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/morel/google-cloud-sdk/completion.bash.inc' ]; then source '/home/morel/google-cloud-sdk/completion.bash.inc'; fi
+
+#GitHub hub bash completion and aliasing
+
+eval "$(hub alias -s)"
+
+if [ -f /home/morel/bin/hub-linux/etc/hub.bash_completion ]; then
+    . /home/morel/bin/hub-linux/etc/hub.bash_completion
+fi
