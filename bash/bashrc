@@ -151,6 +151,6 @@ if [ -f '/home/morel/google-cloud-sdk/completion.bash.inc' ]; then source '/home
 
 eval "$(hub alias -s)"
 
-if [ -f /home/morel/bin/hub-linux/etc/hub.bash_completion ]; then
-    . /home/morel/bin/hub-linux/etc/hub.bash_completion
+if [ -f /usr/local/etc/hub.bash_completion ]; then
+    . /usr/local/etc/hub.bash_completion
 fi
