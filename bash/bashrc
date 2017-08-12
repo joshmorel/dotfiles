@@ -149,8 +149,9 @@ if [ -f '/home/morel/google-cloud-sdk/path.bash.inc' ]; then source '/home/morel
 if [ -f '/home/morel/google-cloud-sdk/completion.bash.inc' ]; then source '/home/morel/google-cloud-sdk/completion.bash.inc'; fi
 
 #GitHub hub bash completion and aliasing
-
-eval "$(hub alias -s)"
+if type hub &> /dev/null; then
+	eval "$(hub alias -s)"
+fi
 
 if [ -f /usr/local/etc/hub.bash_completion ]; then
     . /usr/local/etc/hub.bash_completion
