@@ -22,6 +22,6 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 # nodenv version manager
 
 if [ -d "$HOME/.nodenv" ]; then
-	PATH="$HOME/.nodenv/shims:$HOME/.nodenv/bin:$PATH"'
-	eval "$(nodenv init -)"'
+	PATH="$HOME/.nodenv/shims:$HOME/.nodenv/bin:$PATH"
+	eval "$(nodenv init -)"
 fi
