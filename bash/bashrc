@@ -142,12 +142,6 @@ if [ -f "$HOME/.vault_pass.txt" ]; then
     export ANSIBLE_VAULT_PASSWORD_FILE=$HOME/.vault_pass.txt
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/morel/google-cloud-sdk/path.bash.inc' ]; then source '/home/morel/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/morel/google-cloud-sdk/completion.bash.inc' ]; then source '/home/morel/google-cloud-sdk/completion.bash.inc'; fi
-
 #GitHub hub bash completion and aliasing
 if type hub &> /dev/null; then
 	eval "$(hub alias -s)"
@@ -156,3 +150,9 @@ fi
 if [ -f /usr/local/etc/hub.bash_completion ]; then
     . /usr/local/etc/hub.bash_completion
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/morel/bin/google-cloud-sdk/path.bash.inc' ]; then source '/home/morel/bin/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/morel/bin/google-cloud-sdk/completion.bash.inc' ]; then source '/home/morel/bin/google-cloud-sdk/completion.bash.inc'; fi
