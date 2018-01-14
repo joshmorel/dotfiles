@@ -126,11 +126,11 @@ fi
 
 # Virtualenvwrapper setup
 
-if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+if [ -f "$HOME/.local/bin/virtualenvwrapper.sh" ]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-	export WORKON_HOME=$HOME/envs
-	export PROJECT_HOME=$HOME/git
-	source /usr/local/bin/virtualenvwrapper.sh
+	export WORKON_HOME=$HOME/.virtualenvs
+	export PROJECT_HOME=$HOME/git/python
+	source "$HOME/.local/bin/virtualenvwrapper.sh"
 fi
 
 
