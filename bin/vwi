@@ -12,6 +12,7 @@ if [ ! -f "$index_path" ]; then
     exit 1
 fi
 
+cd $vimwiki_path
 # if no arguments go to index.wiki
 if [ $# -eq 0 ]; then
     vim $index_path
