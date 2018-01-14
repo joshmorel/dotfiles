@@ -7,10 +7,12 @@ set softtabstop=4
 set autoindent
 set laststatus=2
 set nocompatible "for vimwiki
+set modeline "read any per-file vim: options
 
 
 :filetype on
 :filetype plugin on "for vimwiki
+:filetype indent plugin on
 :syntax on "for vimwiki
 
 """"""""""""""
