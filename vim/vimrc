@@ -1,13 +1,13 @@
 call pathogen#infect('bundle/{}')
 
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set autoindent
-set laststatus=2
-set nocompatible "for vimwiki
-set modeline "read any per-file vim: options
+:set expandtab
+:set tabstop=4
+:set shiftwidth=4
+:set softtabstop=4
+:set autoindent
+:set laststatus=2
+:set nocompatible "for vimwiki
+:set modeline "read any per-file vim: options
 
 
 :filetype on
@@ -15,34 +15,3 @@ set modeline "read any per-file vim: options
 :filetype indent plugin on
 :syntax on "for vimwiki
 
-""""""""""""""
-" COLOR
-""""""""""""""
-
-let COLORHOME = $HOME . "/.vim/colors/github.vim"
-
-" only want to use custom color in xterm, otherwise default
-if $TERM == "xterm" && filereadable(COLORHOME)
-    :set t_Co=256
-    :set background=dark
-    colorscheme github
-endif
-
-""""""""""""""
-" KEY MAP 
-""""""""""""""
-
-"toggle between insert and normal mode with c-space
-nnoremap <NUL> i
-imap <NUL> <Esc>
-
-"toggle between insert mode and visual block mode
-
-imap <c-x> <Esc> <c-v> 
-vmap <c-x> I
-
-imap <c-e> <Esc> :wq 
-
-if "%ft" == "py"
-    imap <c-f> <Esc> :w
-endif
