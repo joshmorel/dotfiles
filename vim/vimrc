@@ -15,3 +15,4 @@ call pathogen#infect('bundle/{}')
 :filetype indent plugin on
 :syntax on "for vimwiki
 
+:set clipboard=unnamedplus "yank to OS clipboard
