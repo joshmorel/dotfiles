@@ -1,4 +1,5 @@
 call pathogen#infect('bundle/{}')
+au BufRead,BufNewFile *.sls setfiletype yaml
 
 :set expandtab
 :set tabstop=4
@@ -8,7 +9,6 @@ call pathogen#infect('bundle/{}')
 :set laststatus=2
 :set nocompatible "for vimwiki
 :set modeline "read any per-file vim: options
-
 
 :filetype on
 :filetype plugin on "for vimwiki
