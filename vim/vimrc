@@ -16,3 +16,6 @@ au BufRead,BufNewFile *.sls setfiletype yaml
 :syntax on "for vimwiki
 
 :set clipboard=unnamedplus "yank to OS clipboard
+
+"search
+:set hlsearch
