@@ -19,3 +19,9 @@ au BufRead,BufNewFile *.sls setfiletype yaml
 
 "search
 :set hlsearch
+
+"user-defined commands
+:command VWT VimwikiTOC
+
+"invisibles
+:set list listchars=tab:>-
