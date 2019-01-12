@@ -31,3 +31,4 @@ au BufRead,BufNewFile *.sls setfiletype yaml
 
 "mappings
 :map <C-o> :NERDTreeToggle<CR>
+:map <C-k> :VimwikiTOC<CR>
