@@ -25,3 +25,6 @@ au BufRead,BufNewFile *.sls setfiletype yaml
 
 "invisibles
 :set list listchars=tab:>-
+
+"enable fzf plugin
+:set rtp+=~/.fzf
