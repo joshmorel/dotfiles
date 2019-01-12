@@ -28,3 +28,6 @@ au BufRead,BufNewFile *.sls setfiletype yaml
 
 "enable fzf plugin
 :set rtp+=~/.fzf
+
+"mappings
+:map <C-o> :NERDTreeToggle<CR>
