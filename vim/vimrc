@@ -1,34 +1,35 @@
 call pathogen#infect('bundle/{}')
 au BufRead,BufNewFile *.sls setfiletype yaml
 
-:set expandtab
-:set tabstop=2
-:set shiftwidth=2
-:set softtabstop=2
-:set autoindent
-:set laststatus=2
-:set nocompatible "for vimwiki
-:set modeline "read any per-file vim: options
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+set laststatus=2
+set nocompatible "for vimwiki
+set modeline "read any per-file vim: options
 
-:filetype on
-:filetype plugin on "for vimwiki
-:filetype indent plugin on
-:syntax on "for vimwiki
+filetype on
+filetype plugin on "for vimwiki
+filetype indent plugin on
+syntax on "for vimwiki
 
-:set clipboard=unnamedplus "yank to OS clipboard
+"yank to OS clipboard
+set clipboard=unnamedplus
 
 "search
-:set hlsearch
+set hlsearch
 
 "user-defined commands
-:command VWT VimwikiTOC
+command VWT VimwikiTOC
 
 "invisibles
-:set list listchars=tab:>-
+set list listchars=tab:>-
 
 "enable fzf plugin
-:set rtp+=~/.fzf
+set rtp+=~/.fzf
 
 "mappings
-:map <C-o> :NERDTreeToggle<CR>
-:map <C-k> :VimwikiTOC<CR>
+map <C-o> :NERDTreeToggle<CR>
+map <C-k> :VimwikiTOC<CR>
