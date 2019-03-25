@@ -7,7 +7,6 @@ set shiftwidth=2
 set softtabstop=2
 set autoindent
 set laststatus=2
-set nocompatible "for vimwiki
 set modeline "read any per-file vim: options
 
 filetype on
