@@ -25,6 +25,11 @@ if [ -d "$HOME/go/bin" ]; then
 	PATH="$HOME/go/bin:$PATH"
 fi
 
+# php composer vendor files
+if [ -d "$HOME/.config/composer/vendor/bin" ]; then
+  PATH="$HOME/.config/composer/vendor/bin:$PATH"
+fi
+
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
@@ -34,3 +39,4 @@ if [ -d "$HOME/.nodenv" ]; then
 	PATH="$HOME/.nodenv/shims:$HOME/.nodenv/bin:$PATH"
 	eval "$(nodenv init -)"
 fi
+
